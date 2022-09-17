@@ -1,0 +1,36 @@
+{
+  "name": "tauri-test",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "format": "yarn prettier --write .",
+    "start": "vite",
+    "dev": "vite",
+    "prebuild": "yarn format",
+    "build": "vite build",
+    "serve": "vite preview",
+    "tauri": "tauri"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.1.0",
+    "@types/node": "^18.7.10",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "autoprefixer": "^10.4.11",
+    "cssnano": "^5.1.13",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.0",
+    "vite-plugin-checker": "^0.5.1",
+    "vite-plugin-solid": "^2.3.0"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.1.0",
+    "solid-js": "^1.4.7"
+  }
+}
