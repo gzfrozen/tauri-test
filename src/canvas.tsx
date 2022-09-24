@@ -13,18 +13,20 @@ const Canvas: Component = () => {
       .catch((e) => console.error(e));
   };
 
-  const pixels = [pixel, pixel];
+  const pixels = [pixel, pixel, pixel];
 
   return (
-    <For each={pixels}>
-      {(pixel) => (
-        <div
-          class="h-10 w-10 inline"
-          style={{ "background-color": pixel() ? "black" : "white" }}
-          onclick={render}
-        ></div>
-      )}
-    </For>
+    <div class="flex">
+      <For each={pixels}>
+        {(pixel) => (
+          <div
+            class="h-40 w-40 border-2 border-red-600"
+            style={{ "background-color": pixel() ? "black" : "white" }}
+            onclick={render}
+          ></div>
+        )}
+      </For>
+    </div>
   );
 };
 
