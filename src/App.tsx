@@ -2,13 +2,11 @@ import { createSignal } from "solid-js";
 import logo from "./assets/logo.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
-import { data, setData } from "./signal";
-import TestComponent from "./testConponent";
+import Canvas from "./canvas";
 
 function App() {
   const [greetMsg, setGreetMsg] = createSignal("");
   const [name, setName] = createSignal("");
-  const [value, setValue] = createSignal("ghjakfsd");
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
@@ -48,20 +46,7 @@ function App() {
       </div>
 
       <p>{greetMsg}</p>
-      <div class="mt-5">
-        <h1 class="text-red-800 font-bold text-4xl">Counter {data()}!</h1>
-      </div>
-      <div>
-        <button
-          class="mt-5"
-          onClick={() => {
-            setData(data() + 1);
-          }}
-        >
-          increment
-        </button>
-      </div>
-      <TestComponent value={value()} setValue={setValue} />
+      <Canvas />
     </div>
   );
 }
